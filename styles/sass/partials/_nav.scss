@@ -1,0 +1,117 @@
+// _nav.scss
+
+.announcement {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba($color: $primary, $alpha: 0.08);
+}
+
+.navBar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: $solidWhite;
+    border-bottom: 1px solid rgba($color: $primary, $alpha: 0.08);
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .searchCart {
+        display: flex;
+        .searchIcon,
+        .bag {
+            margin-right: 15px;
+        }
+    }
+    .logo {
+        margin-left: 60px;
+    }
+    .counter {
+        display: flex;
+        align-items: center;
+        p {
+            background-color: $primary;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            color: $solidWhite;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.slideOutNav {
+    height: 100vh;
+    width: 100%;
+    max-width: 506px;
+    background-color: $primary;
+    color: $solidWhite;
+    padding: 35px 50px;
+    border-right: 1px solid $secondary;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -506px;
+    z-index: 20;
+    transition: 0.75s;
+    hr {
+        width: 24px;
+        height: 2px;
+        margin: 36px 0;
+        background-color: $solidWhite;
+    }
+    .mainMenu {
+        a {
+            font-family: 'Young Serif';
+            line-height: 2.5rem;
+            color: $solidWhite;
+            &:hover,
+            &:focus {
+                color: rgba($color: $solidWhite, $alpha: 0.5);
+            }
+        }
+    }
+    .legal {
+        font-family: "Jakarta Sans";
+        font-size: 0.8rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+        color: rgba($color: $solidWhite, $alpha: 0.5);
+    }
+}
+
+
+
+input[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+    // looking for .slideOutNav that is checked in the input of a type of checkbox
+    &:checked ~ .slideOutNav{
+        left: 0;
+    }
+    // looking for a lable that is a direct sibling of checkbox that is focus best practice
+    &:focus + label {
+        border: 1px dotted $primary;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: end;
+    button {
+        color: $solidWhite;
+        background-color: transparent;
+        font-size: 1.2rem;
+        font-family: $bodyFont;
+        padding: 10px 0 10px 20px;
+    }
+}

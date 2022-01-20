@@ -320,6 +320,11 @@ p.discountedPrice {
 p.newsletterCopy {
   font-size: 0.8rem;
 }
+p.valuedTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
 
 ul, li, a, input {
   padding: 0;

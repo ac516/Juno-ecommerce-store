@@ -535,6 +535,10 @@ label {
   padding: 10px 0 10px 20px;
 }
 
+.announcements p {
+  text-align: center;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,6 +587,9 @@ main section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .productImgContainer {
@@ -686,6 +693,68 @@ main section {
 }
 .gallery .galleryItems .item img {
   width: 100%;
+}
+
+.shop section {
+  padding: 90px 0;
+  margin: 0;
+}
+
+.inventory h2 {
+  text-align: center;
+}
+.inventory .product {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.inventory .product a {
+  display: block;
+}
+.inventory .product a:hover {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+.inventory .product a:focus {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+
+.guarantees {
+  background-color: #fff5f5;
+  text-align: center;
+}
+.guarantees::before {
+  content: "";
+  background-image: url(../asset/wave-3.svg);
+  width: 100%;
+  background-color: #fff5f5;
+  position: absolute;
+  background-position: top center;
+  background-size: 100% 60px;
+  top: -60px;
+  height: 3rem;
+  left: 0;
+  right: 0;
+}
+.guarantees h5 {
+  margin-bottom: 60px;
+}
+
+.shopOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.shopOptions .guaranteeContainer {
+  width: calc(25% - 30px);
+  margin: 0 15px;
 }
 
 footer {

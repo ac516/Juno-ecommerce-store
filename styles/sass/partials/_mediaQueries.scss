@@ -1,11 +1,60 @@
 @media (max-width: 1000px) {
     /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+    header {
+        .headerImgContainer {
+            img {
+                height: 100vh;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+    .catergoryGallery {
+        .items {
+            padding: 25px;
+        }
+    }
+    .galleryItems {
+        justify-content: center;
+        .items {
+            width: calc(25% - 20px);
+            margin: 10px;
+        }
+    }
+    .guarantees {
+        .shopOptoins {
+            justify-content: space-between;
+        }
+        .guaranteeContainer {
+            width: calc(45% - 40px);
+            margin: 0 20px 40px 20px;
+        }
+    }
+
+    footer {
+        .footerFlexContainer {
+            
+        }
+    }
 }
 
 @media (max-width: 800px) {
     /* all of our styles for TABLET devices will go within this breakpoint */
+    h4 {
+        
+    }
 }
 
 @media (max-width: 500px) {
    /* all of our styles for MOBILE devices will go within this breakpoint */
+   .guarantees {
+       .shopOptions {
+           flex-direction: row;
+           align-items: center;
+       }
+       .guarantee {
+           width: 85%;
+           margin: 0 0 50px 0;
+       }
+   }
 }

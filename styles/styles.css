@@ -845,10 +845,53 @@ footer .social i:hover, footer .social i:focus {
 
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  header .headerImgContainer img {
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+
+  .catergoryGallery .items {
+    padding: 25px;
+  }
+
+  .galleryItems {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .galleryItems .items {
+    width: calc(25% - 20px);
+    margin: 10px;
+  }
+
+  .guarantees .shopOptoins {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .guarantees .guaranteeContainer {
+    width: calc(45% - 40px);
+    margin: 0 20px 40px 20px;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+  .guarantees .shopOptions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .guarantees .guarantee {
+    width: 85%;
+    margin: 0 0 50px 0;
+  }
 }
